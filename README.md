@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This is an assignment project of Coursera course: **Front-End Web Development with React** from **The Hong Kong University of Science and Technology**.
+
 ## Available Scripts
 
 In the project directory, you can run:
