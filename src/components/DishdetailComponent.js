@@ -1,0 +1,60 @@
+import React, {Component} from 'react';
+import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle} from 'reactstrap';
+
+
+class Dishdetail extends Component{
+
+    constructor(props){
+        super(props);
+        
+        this.state = {
+           
+        };
+        console.log("Dishdetail Component constructor is invoked!");
+    }
+
+    renderComments(comments){
+        if(comments != null){
+            return comments.map((comment) => (
+                    <ul key={comment.id} className="list-unstyled">
+                        <li className='mb-2'>{comment.comment}</li>
+                        <li>
+                            -- {comment.author}{","}
+                            {new Date(comment.date).toLocaleDateString()}
+                        </li>
+                    </ul>
+            ));
+        }else{
+            return <div/>;
+        }
+
+    }
+
+    render(){
+        const {dish} = this.props;
+        return(
+            <div className = "row">
+                <div className='row col-12 col-md-5 m-1'>
+                    <Card>
+                        <CardImg top src={dish.image} alt={dish.name}/>
+                        <CardBody>
+                            <CardTitle>{dish.name}</CardTitle>
+                            <CardText>{dish.description}</CardText>
+                        </CardBody>
+                    </Card>
+                </div>
+                <div className='row col-12 col-md-5 m-1'>
+                    <h4> Comments</h4>
+                    <div className='row'>
+                    {this.renderComments(dish.comments)}
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        );
+
+    }
+}
+
+export default  Dishdetail;
