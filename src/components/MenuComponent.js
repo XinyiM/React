@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle} from 'reactstrap';
-import Dishdetail  from "./DishdetailComponent";  //不要加{}
 
 
 //Basic structure of a component
@@ -18,19 +17,7 @@ class Menu extends Component{
     componentDidMount(){
         console.log("Menu Component componentDidMount is invoked!");
     }
-    onDishSelect(dish){
-        this.setState({ selectedDish: dish});
-
-    }
-    renderDish(dish){
-        if(dish != null){
-            return <Dishdetail dish={dish}/>
-        }else{
-            return(
-                <div> </div>
-            );
-        }
-    }
+    
 
     render(){
 
@@ -40,7 +27,8 @@ class Menu extends Component{
             // updating the screen -> identify every item uniquely.
             return (
                 <div key={dish.id} className='col-12 col-md-5 m-1'>
-                    <Card  onClick={() => this.onDishSelect(dish)}>
+                    <Card key={dish.id}
+                        onClick={() => this.props.onClick(dish.id)}>
                         <CardImg width='100%' src={dish.image} alt={dish.name}/>
                         <CardImgOverlay body className='ml-5'>
                             <CardTitle> {dish.name} </CardTitle>
@@ -55,11 +43,9 @@ class Menu extends Component{
         return( 
             <div className="container">
                 <div className='row'>
-                    
-                        {menu} 
+                    {menu} 
                 </div>
-                    {this.renderDish(this.state.selectedDish)}
-                
+                    {/* {this.renderDish(this.state.selectedDish)} */}
             </div>
         );
     }

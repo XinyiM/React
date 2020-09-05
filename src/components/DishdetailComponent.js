@@ -4,15 +4,19 @@ import { Card, CardImg, CardText, CardBody, CardTitle} from 'reactstrap';
 
 class Dishdetail extends Component{
 
-    constructor(props){
-        super(props);
-        
-        this.state = {
-           
-        };
-        console.log("Dishdetail Component constructor is invoked!");
-    }
+    renderDish(dish){
+        return(
+		<Card>			
+             <CardImg width="100%" src={dish.image} alt={dish.name}/>	     
+            <CardBody>	            
+                <CardTitle>{dish.name}</CardTitle>	               
+                <CardText>{dish.description}</CardText>	               
+            </CardBody>	           
+        </Card>	        
+        );
+    }	    
 
+    
     renderComments(comments){
         if(comments != null){
             return comments.map((comment) => (
@@ -20,7 +24,7 @@ class Dishdetail extends Component{
                         <li className='mb-2'>{comment.comment}</li>
                         <li>
                             -- {comment.author}{","}
-                            {new Date(comment.date).toLocaleDateString()}
+                            {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
                         </li>
                     </ul>
             ));
@@ -33,18 +37,16 @@ class Dishdetail extends Component{
     
 
     render(){
+        
         const {dish} = this.props;
+        // check if there is a selected dish, if not, then return a null div.
+        // if there is a selected dish => this.props.dish is not null  then return dishDetail
+        if (dish != null){
         return(
-            <React.Fragment>
+            <div class = 'container'>
                 <div class = "row">
                     <div className='col-12 col-md-5 m-1'>
-                        <Card>
-                            <CardImg top src={dish.image} alt={dish.name}/>
-                            <CardBody>
-                                <CardTitle>{dish.name}</CardTitle>
-                                <CardText>{dish.description}</CardText>
-                            </CardBody>
-                        </Card>
+                        {this.renderDish(dish)}
                     </div>
                     <div className='col-12 col-md-5 m-1'>
                         <h4> Comments</h4>
@@ -52,8 +54,13 @@ class Dishdetail extends Component{
                     </div>
                 </div>
                 
-            </React.Fragment>
+            </div>
         );
+        }else{
+            return(
+                <div></div>
+            )
+        }
 
     }
 }
