@@ -6,14 +6,16 @@
 
 # Week 2
 
-## Lec 1 : Presentational and Container Components
+## React Component Types
 
-### Presentational Components
+### Lec 1 : Presentational and Container Components
+
+#### Presentational Components
 
 - How things look  - markup and styles
 - Do not maintain own local state
 
-### Container Components
+#### Container Components
 
 - making things work - fetching the data and state updates
 - make use of presentational components for rendering 
@@ -21,9 +23,9 @@
 
 - Provide data to presentational components - in the form of **Props**
 
-## Lec 2 : Lifecycle Methods Part2 
+### Lec 2 : Lifecycle Methods Part2 
 
-### Updating
+#### Updating
 
 `shouldComponentUpdate()` 
 
@@ -41,7 +43,7 @@ Save the information of snapshot of last time when you re-render component
 
 It will be invoked when the component is updated. 
 
-## Lec 3 : Functional Components
+### Lec 3 : Functional Components
 
 A much simple way of define React Components.
 
@@ -55,7 +57,16 @@ Define a JS function that returns a React Element.
 
 
 
+## React Router
 
+### Lec 1 : React Virtual DOM
+
+Virtual DOM is a React object 
+
+- A lightweight representation of Browser DOM
+- In-memory tree data structure of plain JS objects
+- Manipulations extremely fast compared to modifying the browser DOM
+- Created completely from scratch on every **setState**
 
 
 
