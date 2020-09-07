@@ -41,6 +41,30 @@ Save the information of snapshot of last time when you re-render component
 
 It will be invoked when the component is updated. 
 
+## Lec 3 : Functional Components
+
+A much simple way of define React Components.
+
+Define a JS function that returns a React Element. 
+
+**Parameter:** `props`
+
+**Return:** React Element
+
+**Limitations:** Cannot have local state or access lifecycle hooks
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
