@@ -39,13 +39,12 @@ class Menu extends Component{
             );
         });
 
-        console.log("Menu Component reder is invoked!");
+        console.log("Menu Component render is invoked!");
         return( 
             <div className="container">
                 <div className='row'>
                     {menu} 
                 </div>
-                    {/* {this.renderDish(this.state.selectedDish)} */}
             </div>
         );
     }

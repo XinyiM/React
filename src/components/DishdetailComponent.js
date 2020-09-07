@@ -43,8 +43,8 @@ class Dishdetail extends Component{
         // if there is a selected dish => this.props.dish is not null  then return dishDetail
         if (dish != null){
         return(
-            <div class = 'container'>
-                <div class = "row">
+            <div className = 'container'>
+                <div className = "row">
                     <div className='col-12 col-md-5 m-1'>
                         {this.renderDish(dish)}
                     </div>
