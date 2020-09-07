@@ -6,10 +6,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
+  
+  // <React.StrictMode>
+  <div>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </div>
+    
+  // </React.StrictMode>,
+  ,document.getElementById('root')
 );
 // Rendering <App /> class to the DOM root element
 // If you want your app to work offline and load faster, you can change
