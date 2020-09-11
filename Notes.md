@@ -68,9 +68,9 @@ Virtual DOM is a React object
 - Manipulations extremely fast compared to modifying the browser DOM
 - Created completely from scratch on every **setState**
 
+### Lec 2: React Router
 
-
-
+-  A collection of navigation components
 
 
 
