@@ -80,6 +80,41 @@ Virtual DOM is a React object
 
 ![](/Users/maxinyi/Desktop/屏幕快照 2020-09-12 上午10.44.54.png)
 
+### Lec 4: React Router: Parameters
+
+Paths specified as a URL
+
+Path: `menu/:id`
+
+#### Route Parameters
+
+`<Link to{'menu/${dish.id}'}>`
+
+- Route passes three props to the component:
+- **Match, location, history**
+
+#### match Object
+
+match object provides information about how a <Routepath> matched the URL.
+
+- if path is specified as  `/menu/:id`  then a path like `/menu/42` will result in `match.params.id` being equal to **42**. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
