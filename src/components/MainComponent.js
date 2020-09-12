@@ -5,6 +5,7 @@ import Dishdetail from './DishdetailComponent';
 import Contact from './ContactComponent'
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
+import About from './AboutComponent';
 import { DISHES } from '../shared/dishes';
 import { COMMENTS } from '../shared/comments'
 import { LEADERS } from '../shared/leaders'
@@ -60,6 +61,7 @@ class Main extends Component {
               {/* Above should be the exact menu with nothing following. 
               if no 'exact' added, the route will matches /menu and will never come down to dishWithId part*/}
               <Route path='/contactus'component={Contact} />
+              <Route path='/aboutus' component={() => <About leaders={this.state.leaders}/>}/>
               <Redirect to="/home" />
           </Switch>
         <Footer/>
