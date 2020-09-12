@@ -1,3 +1,7 @@
+---
+typora-copy-images-to: ../../../../Desktop/屏幕快照 2020-09-12 上午10.44.54.png
+---
+
 # Week 1
 
 ## Lec : Lifecycle Methods Part1
@@ -72,17 +76,9 @@ Virtual DOM is a React object
 
 -  A collection of navigation components
 
+### Lec 3: Single Page Applications
 
-
-
-
-
-
-
-
-
-
-
+![](/Users/maxinyi/Desktop/屏幕快照 2020-09-12 上午10.44.54.png)
 
 
 
