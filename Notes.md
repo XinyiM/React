@@ -121,6 +121,10 @@ this.handleSubmit = this.handleSubmit.bind(this);
 
 A pure client side form validation to check to see if the users has input the values in a suitable map.
 
+## Lec 2: Uncontrolled Components
+
+Uncontrolled component approach allows you to handle the form data by the DOM itself.
+
 
 
 
