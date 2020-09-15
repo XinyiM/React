@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Home from './HomeComponent';
 import Menu from './MenuComponent';
-import Dishdetail from './DishdetailComponent';
+import DishDetail from './DishdetailComponent';
 import Contact from './ContactComponent'
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
@@ -11,7 +11,7 @@ import { COMMENTS } from '../shared/comments'
 import { LEADERS } from '../shared/leaders'
 import { PROMOTIONS } from '../shared/promotions'
 import { Switch, Route, Redirect } from "react-router-dom";
-import DishDetail from './DishdetailComponent';
+
 
 
 class Main extends Component {

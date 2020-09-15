@@ -78,8 +78,6 @@ Virtual DOM is a React object
 
 ### Lec 3: Single Page Applications
 
-![](/Users/maxinyi/Desktop/屏幕快照 2020-09-12 上午10.44.54.png)
-
 ### Lec 4: React Router: Parameters
 
 Paths specified as a URL
@@ -99,7 +97,29 @@ match object provides information about how a <Routepath> matched the URL.
 
 - if path is specified as  `/menu/:id`  then a path like `/menu/42` will result in `match.params.id` being equal to **42**. 
 
+# Week 3
 
+## Lec 1: Controlled Forms
+
+### Exercise 1: Controlled Forms
+
+#### Function.propotype.bind()
+
+`bind()` 方法创建一个新的函数，在 `bind()` 被调用时，这个新函数的 `this` 被指定为 `bind()` 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。
+
+**Example:**
+
+```javascript
+this.handleSubmit = this.handleSubmit.bind(this);
+```
+
+在浏览器中，`this`指的是全局的"windows"对象。
+
+把`this.handleSubmit()`函数绑定到`this`对象, 然后重新赋给`this.handleSubmit()`.
+
+### Exercise 2: Controlled Form Validation
+
+A pure client side form validation to check to see if the users has input the values in a suitable map.
 
 
 
