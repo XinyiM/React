@@ -1,5 +1,6 @@
 ---
 typora-copy-images-to: ../../../../Desktop/屏幕快照 2020-09-12 上午10.44.54.png
+typora-root-url: ../confusion
 ---
 
 # Week 1
@@ -124,6 +125,82 @@ A pure client side form validation to check to see if the users has input the va
 ## Lec 2: Uncontrolled Components
 
 Uncontrolled component approach allows you to handle the form data by the DOM itself.
+
+## Lec 3: The Model-View-Controller Framework
+
+**Design Patterns:** Well-documented solution to a recurring problem
+
+### Model
+
+- manages the behavior and data of the application domain
+
+- responds to requests for information about its state <=== view
+- responds to instructions to change state <=== controller
+
+### View
+
+renders the model into a from suitable for interaction typically a user interface element
+
+### Controller
+
+receive user input and initiates a response by making calls on a model objects 
+
+accepts inputs from the **user** and instructs the model and viewport perform actions based on that input.
+
+
+
+## Lec 4: The Flux Architecture
+
+![](/flux.png)
+
+## Lec 5: Introduction to Redux
+
+###  Main Principles of Redux
+
+- Sinigle source of truth - Single store and Single state tree 
+- State is read-only - only getter, no setters
+  - Changes only be done through actions
+
+- Changes are made with **pure functions** - **Reducer Functions**
+  - Take previous state -> action -> return next state
+  - No mutation of the previous state.
+
+![](/redux.png)
+
+### Redux Concepts
+
+#### State
+
+ Stored in plain JS object
+
+#### Action
+
+plain JS object with a type filed that specifies how to change something in the state
+
+#### Reducer
+
+pure functions that take the current state and action and return a new state 
+
+- Update data immutably do not modify inputs
+
+### Redux Store
+
+holds the current state value
+
+Created using `createStore()`
+
+### React with Redux
+
+ `connect()`: generates a wrapper `container` component that subscribes to the store.
+
+surround your App root with <Provider>
+
+- Takes the store as an attribute
+- Makes store accessible to all the components in the container
+
+
+
+
 
 
 
