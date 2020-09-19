@@ -198,7 +198,13 @@ surround your App root with <Provider>
 - Takes the store as an attribute
 - Makes store accessible to all the components in the container
 
+## Lec 6: React Redux Form
 
+Provide a collection of reducer creators and action creators. 
+
+Form data stored in Redux store in a model.
+
+Validation support for forms.
 
 
 
