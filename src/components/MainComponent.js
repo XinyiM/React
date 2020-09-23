@@ -6,10 +6,10 @@ import Contact from './ContactComponent'
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import About from './AboutComponent';
-import { DISHES } from '../shared/dishes';
-import { COMMENTS } from '../shared/comments'
-import { LEADERS } from '../shared/leaders'
-import { PROMOTIONS } from '../shared/promotions'
+// import { DISHES } from '../shared/dishes';
+// import { COMMENTS } from '../shared/comments'
+// import { LEADERS } from '../shared/leaders'
+// import { PROMOTIONS } from '../shared/promotions'
 // 'withRouter' is required for configuring my React Component to connect to Redux
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 
@@ -31,9 +31,9 @@ const mapStateToProps = state => {
 }
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   onDishSelect(dishId) {
     this.setState({selectedDish: dishId});
